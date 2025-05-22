@@ -14,8 +14,8 @@ Set up the alias respecting git-dir and work-tree difference.
 Set the untracked files flag to `no`, in order to avoid all the other files and directories in you folder to be mentioned as untracked by git.
 
 ```shell
-git init --bare $HOME/.dotfiles
-alias config-dotfile="$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+git init --bare $HOME/dotfiles
+alias config-dotfile="$(which git) --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 config-dotfile config --local status.showUntrackedFiles no
 ```
 
@@ -46,7 +46,8 @@ Clone the repository specifying the separate git-dir argument to the folder with
 If any pre-existing config files conflicts with yours, choose whether to save them separately in another folder, or discard them.
 
 ```sh
-git clone --separate-git-dir=$HOME/.dotfiles <URL-REPO> ~
+git clone --bare <URL-REPO> $HOME/dotfiles
+config-dotfile checkout main
 ```
 
 ## References
