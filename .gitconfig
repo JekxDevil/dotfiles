@@ -1,0 +1,12 @@
+[user]
+	email = jeferson.morales.mariciano@gmail.com
+	name = Jeferson Morales Mariciano
+	signingkey = FDB603B548BFC0A2
+[commit]
+	gpgsign = true
+[core]
+	editor = nvim
+[safe]
+	directory = *
+	directory = *
+	directory = *
