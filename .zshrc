@@ -70,7 +70,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git direnv)
+plugins=(git zsh-autosuggestions mise)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,10 +100,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# setting neovim as default editor and vi keybindings for terminal
 alias vim="nvim"
 set -o vi
+
+# set gpg usage from terminal
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# Go, path
+export PATH=$PATH:/usr/local/go/bin 
 
 # Created by `pipx` on 2024-04-23 23:44:49
 export PATH="$PATH:/home/wslef/.local/bin"
@@ -112,15 +118,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
-eval "$(pyenv virtualenv-init -)"
-
 # uv
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
 # config dotfiles alias
-alias config-dotfile="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias config-dotfile="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+
+# logged user
+DEFAULT_USER=gief
+
+# print gnu msg
+neofetch --ascii_distro gnu | lolcat -F 0.3

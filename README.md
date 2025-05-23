@@ -51,7 +51,15 @@ config-dotfile checkout main
 ```
 
 ## References
-- <https://www.atlassian.com/git/tutorials/dotfiles>
-- <https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles/>
-- <https://news.ycombinator.com/item?id=11071754>
-- <https://www.reddit.com/r/golang/comments/egeip1/gnu_stow_alternative_written_in_go/>
+
+- Set up dotfiles repository
+    - <https://www.atlassian.com/git/tutorials/dotfiles>
+    - <https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles/>
+    - <https://news.ycombinator.com/item?id=11071754>
+    - <https://www.reddit.com/r/golang/comments/egeip1/gnu_stow_alternative_written_in_go/>
+- Tools
+  - mise <https://mise.jdx.dev/>
+  - uv <https://docs.astral.sh/uv/>
+- Why Mise
+  - <https://news.ycombinator.com/item?id=42347917> 
+  - <https://news.ycombinator.com/item?id=42353634>
