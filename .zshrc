@@ -70,7 +70,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions mise)
+plugins=(git mise)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,15 +108,11 @@ set -o vi
 GPG_TTY=$(tty)
 export GPG_TTY
 
-# Go, path
+# Go path
 export PATH=$PATH:/usr/local/go/bin 
 
 # Created by `pipx` on 2024-04-23 23:44:49
 export PATH="$PATH:/home/wslef/.local/bin"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # uv
 eval "$(uv generate-shell-completion zsh)"
