@@ -1,0 +1,7 @@
+[tools]
+usage = "latest"
+
+[settings]
+
+[settings.python]
+compile = true
