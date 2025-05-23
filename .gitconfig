@@ -4,6 +4,8 @@
 	signingkey = FDB603B548BFC0A2
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main
 [core]
-	editor = nvim
+	editor = vim
 
