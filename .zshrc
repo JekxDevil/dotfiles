@@ -70,7 +70,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git mise)
+plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,24 +105,15 @@ alias vim="nvim"
 set -o vi
 
 # set gpg usage from terminal
-GPG_TTY=$(tty)
-export GPG_TTY
-
-# Go path
-export PATH=$PATH:/usr/local/go/bin 
-
-# Created by `pipx` on 2024-04-23 23:44:49
-export PATH="$PATH:/home/wslef/.local/bin"
+export GPG_TTY=$(tty)
 
 # uv
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
 # config dotfiles alias
-alias config-dotfile="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias config-dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+config-dotfiles config --local status.showUntrackedFiles no
 
-# logged user
-DEFAULT_USER=gief
-
-# print gnu msg
-neofetch --ascii_distro gnu | lolcat -F 0.3
+# print msg
+fastfetch 

@@ -15,8 +15,8 @@ Set the untracked files flag to `no`, in order to avoid all the other files and 
 
 ```shell
 git init --bare $HOME/dotfiles
-alias config-dotfile="$(which git) --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-config-dotfile config --local status.showUntrackedFiles no
+alias config-dotfiles="$(which git) --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+config-dotfiles config --local status.showUntrackedFiles no
 ```
 
 Optionally, set the alias it in your shell `.*rc` file.
@@ -33,10 +33,10 @@ config-dotfiles branch --set-upstream-to=origin/main main
 After the set up, any file within the home folder can be versioned with the alias followed by standard git commands.
 
 ```shell
-config-dotfile status
-config-dotfile add .zshrc
-config-dotfile commit
-config-dotfile push
+config-dotfiles status
+config-dotfiles add .zshrc
+config-dotfiles commit
+config-dotfiles push
 ```
 
 ## Cloning
@@ -47,7 +47,7 @@ If any pre-existing config files conflicts with yours, choose whether to save th
 
 ```sh
 git clone --bare <URL-REPO> $HOME/dotfiles
-config-dotfile checkout main
+config-dotfiles switch main
 ```
 
 ## References
