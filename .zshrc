@@ -115,5 +115,8 @@ eval "$(uvx --generate-shell-completion zsh)"
 alias config-dotfiles="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 config-dotfiles config --local status.showUntrackedFiles no
 
+export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
+
 # print msg
-fastfetch 
+fastfetch
