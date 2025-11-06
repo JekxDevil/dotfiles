@@ -50,6 +50,15 @@ git clone --bare <URL-REPO> $HOME/dotfiles
 config-dotfiles switch main
 ```
 
+## Personal Configuration
+
+### GNU/Linux
+
+- window manager: i3 with i3block, i3lockmore
+- terminal: st
+- utils: universal-android-debloater
+- editor: neovim
+
 ## References
 
 - Set up dotfiles repository
